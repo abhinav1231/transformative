@@ -1,0 +1,101 @@
+<div class="form-body">
+  <div class="website-logo">
+      <a href="index.html">
+          <div class="logo">
+              <img class="logo-size" src="images/logo-light.svg"  height="50" width="50" alt="Transformative logo">
+          </div>
+      </a>
+  </div>
+  <div class="row">
+      <div class="img-holder">
+          <div class="bg"><img src="../../assets/images/logo.png"></div>
+          <div class="info-holder ">
+              <h5 class="text-uppercase mb-5">transformative</h5>
+              <h4 class="text-uppercase">your logistics, investory and order just a click away</h4>
+              <div class="mt-5">
+                <button id="submit" type="submit" class="ibtn2 text-uppercase">Learn More</button>
+              </div>
+          </div>
+          <div class="social-icons position-absolute">
+            <ul class="text-center pl-0 ">
+              <li><a href="http://facebook.com/"><i class="fab fa-facebook-square"></i></a></li>
+              <li><a href="http://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="http://instagram.com/"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="http://youtube.com/"><i class="fab fa-youtube"></i></a></li>
+              <li><a href="http://pinterest.com/"><i class="fab fa-pinterest-square"></i></a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="form-holder">
+          <div class="form-content">
+              <div class="form-items">
+                  <h3>Sign in to Transformative.</h3>
+                  <p>Enter your details below.</p>
+
+                  <form [formGroup]="login">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-12 mt-4">
+                          <div class="form-group has-icon">
+                            <label for="exampleFormControlInput1">USERNAME</label>
+                            <input type="email" formControlName="email" class="form-control form-control-lg" placeholder="Enter your Email Id"
+                              required/>
+                            <div class="small" *ngIf="!login.controls['email'].valid&&login.controls['email'].dirty">
+                              <span *ngIf="login.controls['email'].errors['required']">Email cannot be left blank</span>
+                              <span *ngIf="login.controls['email'].errors['pattern']">Email address format is incorrect</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="form-group has-icon">
+                            <label for="exampleFormControlInput1">PASSWORD</label>
+                            <input type="password" formControlName="password" class="form-control form-control-lg" placeholder="Enter Your Password" required/>
+                          </div>
+                          <div class="small" *ngIf="!login.controls['password'].valid&&login.controls['password'].dirty">
+                            <span *ngIf="login.controls['password'].errors['required']">Password cannot be left blank</span>
+                            <span *ngIf="login.controls['password'].errors['minlength']">password must be atleast 6
+                              characters</span>
+                            <span *ngIf="login.controls['password'].errors['pattern']&&!login.controls['password'].errors['minlength']">Password
+                              must contain at least 6 characters including 1 uppercase and 1 lowercase letter, 1 special
+                              character and 1 number</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                          </div>
+                        </div>
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col">
+                          <div class="form-button m-0">
+                            <p class="cus-color"><a href="">Forget UserName</a> / <a href="">Password</a> ? </p>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="row text-center">
+                        <div class="col">
+
+                        </div>
+                        <div class="col-6">
+                          <div class="form-button m-0">
+                            <button id="submit" (click)="login_apiform()" type="submit" class="ibtn">SIGN IN</button>
+                        </div>
+                        </div>
+                        <div class="col">
+
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
