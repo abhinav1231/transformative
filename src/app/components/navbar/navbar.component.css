@@ -2,10 +2,21 @@
 .avatar {
   margin-top: -15px;
   margin-bottom: -15px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .pd-box{
   margin-right: -9px;
   padding-top:12px;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+    position: absolute;
+    width: 22rem;
+}
+
+.f-small{
+  font-size: 85%;
+}
+.pd-box1 {
+    padding-right: 2em;
 }
