@@ -55,10 +55,10 @@
                           </div>
                           <div class="small" *ngIf="!login.controls['password'].valid&&login.controls['password'].dirty">
                             <span *ngIf="login.controls['password'].errors['required']">Password cannot be left blank</span>
-                            <span *ngIf="login.controls['password'].errors['minlength']">password must be atleast 6
+                            <span *ngIf="login.controls['password'].errors['minlength']">password must be atleast 5
                               characters</span>
                             <span *ngIf="login.controls['password'].errors['pattern']&&!login.controls['password'].errors['minlength']">Password
-                              must contain at least 6 characters including 1 uppercase and 1 lowercase letter, 1 special
+                              must contain at least 5 characters including 1 uppercase and 1 lowercase letter, 1 special
                               character and 1 number</span>
                           </div>
                         </div>
