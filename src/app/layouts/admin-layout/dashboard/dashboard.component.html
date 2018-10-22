@@ -1,25 +1,312 @@
-<div class="wrapper-dashboard m-3">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="col-md-6 d-inline">
-            </div>
-            <div class="col-md-6 d-inline">
-            </div>
-        </div>
-    </div>
-    <div class="container">
+<div class="wrapper-dashboard m-4">
+    
         <div class="row">
             <div class="col">
-                                <h2 class="text-left">HOME</h2>
-
+                <h3>HOME</h3>
             </div>
-            <div class="col-6">
-                2 of 3 (wider)
-            </div>
-            <div class="col">
-                <a class="btn btn-info btn-sm text-white">Today <i class="fas fa-calendar"></i></a>
+            <div class="col text-right">
+                <div class="btn text-white">  
+                <form class="form-inline">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" placeholder="yyyy-mm-dd"
+                             name="dp" [(ngModel)]="model"  placeholder="Today" name="dp1" [(ngModel)]="newItem.EndTime"  ngbDatepicker #d1="ngbDatepicker">
+                      <div class="input-group-append border">
+                        <i class=" fas fa-calendar p-2  bg-white text-muted" (click)="d1.toggle(); openDatepicker(d1); closeDatepicker(d2)"></i>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
             </div>
         </div>
-        
-    </div>
-</div>
+
+          <div class="row align-items-start mt-2 mb-2 text-center">
+            <div class="col-12 col-md-4 col-lg-2 mb-3 mt-3">
+                 <div class="card">
+                      <div class="card-body text-left">
+                        <h6 class="card-title mb-0">Qty</h6>
+                        <h2 class="text-info pbtm">250</h2>
+                        <div class="text-right position-absolute pos-bx">
+                          <img src="/src/assets/images/icon1.png" width="50" height="50">
+                        </div>
+                        <h6 class="card-title mb-0">To Be</h6>
+                        <h5 class="mb-0">Packed</h5>
+                      </div>
+                    </div>            
+                </div>
+            <div class="col-12 col-md-4  col-lg-2 mb-3 mt-3">
+                 <div class="card">
+                      <div class="card-body text-left">
+                        <h6 class="card-title mb-0">Qty</h6>
+                        <h2 class="text-info pbtm">250</h2>
+                        <div class="text-right position-absolute pos-bx">
+                          <img src="/src/assets/images/icon1.png" width="50" height="50">
+                        </div>
+                        <h6 class="card-title mb-0">To Be</h6>
+                        <h5 class="mb-0">Shipped</h5>
+                      </div>
+                    </div>            
+                </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3 mt-3">
+                 <div class="card">
+                      <div class="card-body text-left">
+                        <h6 class="card-title mb-0">Qty</h6>
+                        <h2 class="text-info pbtm">250</h2>
+                        <div class="text-right position-absolute pos-bx">
+                          <img src="/src/assets/images/icon1.png" width="50" height="50">
+                        </div>
+                        <h6 class="card-title mb-0">To Be</h6>
+                        <h5 class="mb-0">Delivered</h5>
+                      </div>
+                    </div>            
+                </div>
+            <div class="col-12 col-md-4 col-lg-2 mb-3 mt-3">
+                 <div class="card">
+                      <div class="card-body text-left">
+                        <h6 class="card-title mb-0">Qty</h6>
+                        <h2 class="text-info pbtm">250</h2>
+                        <div class="text-right position-absolute pos-bx">
+                          <img src="/src/assets/images/icon1.png" width="50" height="50">
+                        </div>
+                        <h6 class="card-title mb-0">To Be</h6>
+                        <h5 class="mb-0">Invoiced</h5>
+                      </div>
+                    </div>            
+                </div>
+            <div class="col-12 col-md-8 col-lg-4 mb-3 mt-3">
+                 <div class="card">
+                      <div class="card-body">
+                        <h4 class="d-flex align-items-center mb-0 font-weight-normal">Inventory Summery</h4>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-7"><p class="h6 text-left text-muted d-flex align-items-center mb-0">Quantity in hand</p></div>
+                                <div class="col-md-4"><p class="h6 text-left text-success d-flex align-items-center mb-0">430000qty</p></div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-7"><p class="h6 text-left text-muted d-flex align-items-center mb-0">Quantity to be received</p></div>
+                                <div class="col-md-4"><p class="h6 text-left text-danger d-flex align-items-center mb-0">320000qty</p></div>
+                            </div>
+                        </li>
+                      </ul>
+                    </div>            
+                </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-md-12 col-lg-6 mb-3">
+              <div class="card">
+                  <div class="card-header bg-white">
+                    <div class="row">
+                      <div class="col d-flex align-items-center"><h4 class="font-weight-normal mb-0">Number of Sales</h4></div>
+                      <div class="col d-flex align-items-center">
+                        <div class="btn text-white">  
+                          <form class="form-inline">
+                            <div class="form-group">
+                              <div class="input-group">
+                                <input class="form-control" placeholder="Today" ngbDatepicker #d="ngbDatepicker">
+                                <div class="input-group-append">
+                                  <i class=" fas fa-calendar p-2  bg-white text-muted" (click)="d.toggle()" type="button"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                      <div class="row">
+                        <div class="col">
+                          <h5 class="card-title pl-4 font-weight-normal">
+                            500 Average Daily Sales
+                          </h5>
+                        </div>
+                        <div class="col text-right">
+                                <h5 class="card-title text-danger font-weight-normal pr-4 mb-0">
+                                    100450 Total Sales 
+                                </h5>
+                        </div>
+                      </div>
+                      <canvas id="myChart" class="mb-2 mt-3"></canvas>
+                  </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-12 col-lg-6 ">
+                <div class="card">
+                    <div class="card-header bg-white">
+                      <div class="row">
+                        <div class="col d-flex align-items-center"><h4 class="font-weight-normal mb-0">Revenue</h4></div>
+                        <div class="col d-flex align-items-center">
+                          <div class="btn text-white">  
+                            <form class="form-inline">
+                              <div class="form-group">
+                                <div class="input-group">
+                                  <input class="form-control"  placeholder="Monthly" name="dp2" [(ngModel)]="newItem"  ngbDatepicker #d2="ngbDatepicker" #d3 >
+                                  <div class="input-group-append">
+                                    <i class=" fas fa-calendar p-2  bg-white text-muted" (click)="d2.toggle(); openDatepicker(d2); closeDatepicker(d1)"  type="button"></i>
+                                  </div>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                          <div class="col">
+                            <h5 class="card-title pl-4 font-weight-normal">
+                              650020 rs
+                            </h5>
+                          </div>
+                          <div class="col text-right">
+                            <div class="row">
+                              <div class="col-md-12">
+                                  <h5 class="card-title text-danger font-weight-normal pr-4 mb-0">
+                                      <i class="fas fa-arrow-up pr-2 ">
+                                      </i> 
+                                      5000rs 
+                                  </h5>
+                              </div>
+                              <div class="col-md-12">
+                                  <small class="text-dark pr-4">
+                                      Past Month
+                                    </small>                                    
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <canvas id="myChart2" class="mt-2"></canvas>
+
+                    </div>
+
+                  </div>
+              </div>
+          </div>
+          <div class="row  pt-5">
+            <div class="col-12 col-md-12 col-lg-4 mb-3">
+              <div class="card">
+                <div class="card-header bg-white">
+                  <div class="row">
+                    <div class="col d-flex align-items-center">
+                      <h4 class="font-weight-normal mb-0">Product Details</h4>
+                    </div>                   
+                  </div>
+                </div>
+                <div class="card-body pd-bx2">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="row">
+                        <div class="col-md-8">
+                          <h5 class="text-danger font-weight-normal">Low Stock Items</h5>
+                        </div>
+                        <div class="col-md-4">
+                          <h5 class="text-danger font-weight-normal">29</h5>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-8">
+                              <h5 class="text-muted font-weight-normal">All Items Group</h5>
+                            </div>
+                            <div class="col-md-4">
+                              <h5 class="text-muted font-weight-normal">40</h5>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-8">
+                              <h5 class="text-muted font-weight-normal">All Items</h5>
+                            </div>
+                            <div class="col-md-4">
+                              <h5 class="text-muted font-weight-normal">54</h5>
+                            </div>
+                          </div>
+                    </div> 
+                    <div class="col-md-11  ml-3 col-md-offset-2 text-center pt-2 pb-2 mt-3 mb-3 border-top border-bottom">  
+                      <h5 class="font-weight-normal mb-0">Active Items</h5>                            
+                    </div>
+                    <div class="col-md-12 mt-1">
+                        <p><ngb-progressbar [showValue]="true" type="info" [value]="80" [height]="height"></ngb-progressbar></p>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" col-12 col-md-12 col-lg-8 mb-4">
+              <div class="card">
+                <div class="card-header bg-white p-0 pl-4">
+                  <div class="row">
+                    <div class="col d-flex align-items-center"><h4 class="font-weight-normal mb-0">Top Selling Items</h4></div>
+                    <div class="col text-right">
+                      <div class="btn text-white">  
+                        <form class="form-inline">
+                          <div class="form-group">
+                            <div class="input-group">
+                              <input class="form-control"  placeholder="Monthly" name="dp2" [(ngModel)]="newItem"  ngbDatepicker #d2="ngbDatepicker" #d3 >
+                              <div class="input-group-append">
+                                <i class=" fas fa-calendar p-2  bg-white text-muted" (click)="d2.toggle(); openDatepicker(d2); closeDatepicker(d1)"  type="button"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body p-5">
+                  <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
+                      <div class="carousel-inner w-100 text-center" role="listbox">
+                          <div class="carousel-item row no-gutters active">
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                          </div>
+                          <div class="carousel-item row no-gutters">
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                              <div class="col-12 col-md-3 col-lg-3 float-left"><img class="img-fluid" src="/src/assets/images/product1.png" width="50"  height="50">
+                                <h6 class="card-title font-weight-normal pt-4 pb-2">"Lorem ipsum dolor sit amet,  nisi ut aliquip ex ea commodo consequat."</h6>
+                              </div>
+                          </div>
+                      </div>
+                      <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                          <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                          <i class="fas fa-angle-left text-muted h4"></i>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                          <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                          <i class="fas fa-angle-right text-muted h4"></i>
+                          <span class="sr-only">Next</span>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+  

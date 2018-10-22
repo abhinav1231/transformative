@@ -20,3 +20,21 @@
 .pd-box1 {
     padding-right: 2em;
 }
+.badge1 {
+  position:relative;
+}
+.badge1[data-badge]:after {
+  content: attr(data-badge);
+  position: absolute;
+  top: 0px;
+  right: -8px;
+  font-size: 10px;
+  background: #f55050;
+  color: white;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #f55050;
+}

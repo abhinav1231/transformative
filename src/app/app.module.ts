@@ -1,4 +1,3 @@
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
@@ -11,25 +10,23 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { ComponentsModule } from './components/components.module';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
    declarations: [
       AppComponent,
       LoginComponent,
       AdminLayoutComponent
-
    ],
    imports: [
       CommonModule,
-      BrowserAnimationsModule,
       FormsModule,
       RouterModule.forRoot(appRoutes),
       ReactiveFormsModule,
       HttpModule,
       BrowserModule,
-      ComponentsModule
+      ComponentsModule,
+      NgbModule
     ],
    providers: [],
    bootstrap: [
