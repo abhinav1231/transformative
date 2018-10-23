@@ -37,7 +37,7 @@
                       <div class="row">
                         <div class="col-md-12 mt-4">
                           <div class="form-group has-icon">
-                            <label for="exampleFormControlInput1">USERNAME</label>
+                            <label for="exampleFormControlInput1">EMAIL</label>
                             <input type="email" formControlName="email" class="form-control form-control-lg" placeholder="Enter your Email Id"
                               required/>
                             <div class="small" *ngIf="!login.controls['email'].valid&&login.controls['email'].dirty">
@@ -80,16 +80,16 @@
                         </div>
                       </div>
                       <div class="row text-center">
+                        
                         <div class="col">
-
-                        </div>
-                        <div class="col-6">
                           <div class="form-button m-0">
-                            <button id="submit" (click)="login_apiform()" type="submit" class="ibtn">SIGN IN</button>
-                        </div>
+                            <button  (click)="login_apiform()" type="submit" class="ibtn">SIGN IN</button>
+                          </div>
                         </div>
                         <div class="col">
-
+                          <div class="form-button m-0">
+                            <button [routerLink]="['/signup']" type="submit" class="ibtn bg-success">SIGNUP</button>
+                          </div>
                         </div>
                       </div>
                     </div>

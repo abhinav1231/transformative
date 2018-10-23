@@ -11,12 +11,14 @@ import { LoginComponent } from './login/login.component';
 import { ComponentsModule } from './components/components.module';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       LoginComponent,
-      AdminLayoutComponent
+      AdminLayoutComponent,
+      SignupComponent
    ],
    imports: [
       CommonModule,
