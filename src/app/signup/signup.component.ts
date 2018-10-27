@@ -56,13 +56,13 @@ export class SignupComponent implements OnInit {
   signup_apiform() {
     let postData = this.signup.value;
     console.log('postData=====>>>', postData )
-    this.http.post('http://localhost:4000/admin/signup', postData).
+    this.http.post('http://localhost:3000/admin/signup', postData).
       subscribe((response) => {
         var res = JSON.parse(response['_body']);
-        if (res.statusCode == 200) {
-          // alert(JSON.stringify(res));
-          localStorage.setItem('adminAddress', res.result.adminAddress)
-          this.router.navigate(['/dashboard']);
+        if (res.status == 200) {
+          alert(JSON.stringify(res));
+          // localStorage.setItem("adminAddress", res.result.adminAddress);
+          this.router.navigate(["/login"]);
         } else {
           alert(res.message);
         }

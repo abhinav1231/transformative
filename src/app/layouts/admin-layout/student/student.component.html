@@ -1,0 +1,25 @@
+<div class="p-5">
+  <div class="container">
+    <form [formGroup]="student">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Enter Your Full Name</label>
+        <input type="text" formControlName="name"  class="form-control" placeholder="Enter Full Name" required>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Roll Number</label>
+        <input type="text" formControlName="rollnumber"  class="form-control"  placeholder="Enter Roll Number" required>
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2">Teacher</label>
+        <input type="text" formControlName="teachername"  class="form-control"  placeholder="Enter Class Teacher Name" required>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Address</label>
+        <textarea class="form-control" formControlName="address" placeholder="Enter Your Full Address"  rows="3" required></textarea>
+      </div>
+      <div class="text-center form-button mt-4">
+        <button [routerLink]="['/student']" (click)="student_apiform()" type="submit" class="btn btn-danger">Student Form</button>
+      </div>
+    </form>
+  </div>
+</div>

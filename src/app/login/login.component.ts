@@ -42,16 +42,16 @@ export class LoginComponent implements OnInit {
   login_apiform() {
     let postData = this.login.value;
     console.log('postData=====>>>', postData )
-    this.http.post('http://localhost:4000/admin/login', postData).
+    this.http.post('http://localhost:3000/admin/login', postData).
     subscribe((response) => {
-      var res = JSON.parse(response._body); 
-        debugger
+      var res = JSON.parse(response['_body']);
+        
         if (res.status == 200) {
           alert(JSON.stringify(res));
           // localStorage.setItem('adminAddress', res.result.adminAddress)
           this.router.navigate(['/dashboard']);
         } else {
-          alert(res.message);  
+          alert(res.message);
         }
       });
   }

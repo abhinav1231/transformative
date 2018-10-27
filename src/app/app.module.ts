@@ -12,6 +12,7 @@ import { ComponentsModule } from './components/components.module';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { SignupComponent } from './signup/signup.component';
+import { GlobalService } from './Global.service';
 
 @NgModule({
    declarations: [
@@ -30,7 +31,7 @@ import { SignupComponent } from './signup/signup.component';
       ComponentsModule,
       NgbModule
     ],
-   providers: [],
+  providers: [GlobalService],
    bootstrap: [
       AppComponent
    ]

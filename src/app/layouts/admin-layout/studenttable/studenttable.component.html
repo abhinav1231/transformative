@@ -1,0 +1,27 @@
+<div class="p-5">
+  <div class="container">
+    <table class="table">
+      <caption>List of users</caption>
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Roll Number</th>
+          <th scope="col">Teacher Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Delete </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of responseData ; let i=index ;">
+          <td>{{i+1}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.rollnumber}}</td>
+          <td>{{student.teachername}}</td>
+          <td>{{student.address}}</td>
+          <td><i class="btn btn-sm btn-danger far fa-times-circle" title="delete product" (click)="delete(student._id)"></i></td>
+        </tr>        
+      </tbody>
+    </table>
+  </div>
+</div>
